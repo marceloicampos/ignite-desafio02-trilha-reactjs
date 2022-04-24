@@ -1,2 +1,2 @@
-# ignite-desafio01-trilha-reactjs
-Desafio 01 Trilha React JS - Ignite Classes
+# ignite-desafio02-trilha-reactjs
+Desafio 02 Trilha React JS - Ignite Classes
