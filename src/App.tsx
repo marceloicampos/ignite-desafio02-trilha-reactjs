@@ -27,12 +27,16 @@ export interface MovieProps {
 export function App() {
 
   const [selectedGenreId, setSelectedGenreId] = useState(1);
-  const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
+  const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>([] as unknown as GenreResponseProps);
+  // const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
 
   useEffect(() => {
-    api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {
-      setSelectedGenre(response.data);
+    api.get(`genres/${selectedGenreId}`).then(response => {
+      setSelectedGenre(response.data.genres);
     })
+    // api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {
+    //   setSelectedGenre(response.data);
+    // })
   }, [selectedGenreId]);
 
   function handleClickButton(id: number) {
