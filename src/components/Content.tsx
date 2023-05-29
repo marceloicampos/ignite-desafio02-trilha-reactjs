@@ -24,7 +24,7 @@ export function Content({ selectedGenreId, selectedGenre }: ContentProps) {
   return (
     <div className="container">
       <header>
-        <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
+        <span className="category">Categoria Escolhida:<span> {selectedGenre.title}</span></span>
       </header>
       <main>
         <div className="movies-list">
