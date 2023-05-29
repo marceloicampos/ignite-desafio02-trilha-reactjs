@@ -7,8 +7,7 @@ import { createServer } from 'miragejs'
 createServer({
   routes() {
 
-    // this.urlPrefix = 'http://localhost:3333'
-    this.urlPrefix = 'https://ignite-desafio02-trilha-reactjs.vercel.app/'
+    this.urlPrefix = 'http://localhost:3333'
 
     this.get("/movies/Genre_id=1", () => {
       return [
